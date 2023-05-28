@@ -19,7 +19,7 @@ return new class extends Migration
             $table->unsignedBigInteger('tipo_cliente_id');
             $table->foreign('tipo_cliente_id')->references('id')->on('tipo_clientes')->onDelete('cascade');
 
-            $table->unsignedBigInteger('user_id');
+            $table->unsignedBigInteger('user_id')->default(1);
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
 
             $table->boolean('estado')->default(1);
